@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.849);
+    height: 150px;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    font-size: 54px;
+    text-align: center;
+}
+
+.login {
+    width: 25%;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.699);
+    border-radius: 20px;
+    margin-left: 40%;
+    margin-top: 200px;
+}
