@@ -3,71 +3,13 @@
     padding: 0;
 }
 
-.imgFundo {
-    margin-left: 10%;
-}
-
-.imgFundo2 {
-    margin-left: 10%;
-}
-
-#btnReset {
-    position: absolute;
-    margin-top: 550px;
-    margin-left: 50%;
-    height: 50px;
-    width: 165px;
-}
-
-
-/*=========================================================================================
-                                Aba login
-=========================================================================================*/
-
-.login {
-    top: 220px;
-    height: 300px;
-    width: 60%;
-    margin-left: 20%;
-    background: rgba(0, 0, 0, 0.274);
-    position: absolute;
-    border-radius: 20px;
-}
-
-.login ul li {
-    display: block;
-}
-
-.login ul {
-    margin-left: 35%;
-    margin-top: 50px;
-}
-
-.login #staticEmail {
-    width: 50%;
-    color: white;
-    background: rgba(255, 255, 255, 0.397);
-    border-radius: 5px;
-}
-
-.login #inputPassword {
-    width: 50%;
-    background: rgba(255, 255, 255, 0.397);
-    border-radius: 5px;
-}
-
-#enviarLogin {
-    margin-top: 20px;
-    margin-left: 18%;
-}
-
 
 /*==================================================================================================
                                 PERSONALIZAÇÃO GERAL
 =================================================================================================*/
 
 body {
-    background: black;
+    background: grey;
 }
 
 h1 {
@@ -122,6 +64,14 @@ label {
     color: white;
 }
 
+.dataTime {
+    width: 20%;
+    height: 100px;
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 5%;
+}
+
 
 /*====================================================================================
                                 ABA HAMBURGUE
@@ -132,7 +82,7 @@ label {
     background: rgba(0, 0, 0, 0.274);
     height: 585px;
     width: 20%;
-    margin-left: 15%;
+    margin-left: 32%;
     border-radius: 5%;
 }
 
@@ -168,7 +118,7 @@ label {
     background: rgba(0, 0, 0, 0.274);
     height: 525px;
     width: 20%;
-    margin-left: 40%;
+    margin-left: 55%;
     border-radius: 5%;
 }
 
@@ -198,7 +148,7 @@ label {
     background: rgba(0, 0, 0, 0.274);
     height: 220px;
     width: 20%;
-    margin-left: 64%;
+    margin-left: 78%;
     border-radius: 5%;
 }
 
@@ -228,7 +178,7 @@ label {
     background: rgba(0, 0, 0, 0.274);
     height: 280px;
     width: 20%;
-    margin-left: 64%;
+    margin-left: 78%;
     margin-top: 230px;
     border-radius: 5%;
 }
@@ -254,20 +204,20 @@ label {
                                 ABA BOTÕES
 ======================================================================================*/
 
-#btnEnviar {
-    height: 50px;
-    width: 165px;
-    position: absolute;
-    top: 650px;
-    margin-left: 55%;
-}
-
 #btnForm {
     position: absolute;
     height: 50px;
     width: 165px;
+    top: 850px;
+    margin-left: 5%;
+}
+
+#calcularTroco {
+    position: absolute;
+    height: 50px;
+    width: 165px;
     top: 650px;
-    margin-left: 30%;
+    margin-left: 5%;
 }
 
 
@@ -275,41 +225,17 @@ label {
                                ABA FINALIZANDO
 ======================================================================================*/
 
-#finalizando {
-    height: 600px;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    background: rgba(0, 0, 0, 0.548);
-    border-radius: 20px;
-    position: absolute;
-    /*display: none;*/
-    top: -300%;
-    transition: 350ms;
-}
-
-#finalizando h2 {
-    color: white;
-    text-align: center;
-    font-size: 34px;
-}
-
 
 /*====================================================================================
                                ABA FINALIZANDO/ formas de  pagamento
 ======================================================================================*/
 
 .pagamento {
-    height: 470px;
-    width: 40%;
-    background: white;
-    margin-left: 55%;
-    position: absolute;
-    border-radius: 20px;
+    margin-top: 50px;
 }
 
 .pagamento label {
-    color: black;
+    color: white;
 }
 
 .pagamento ul li {
@@ -323,16 +249,16 @@ label {
 }
 
 .visor {
-    margin-top: 15px;
+    margin-top: 70px;
     height: 100px;
     width: 50%;
-    background: rgba(94, 1, 1, 0.342);
+    background: white;
     border: grey 1px solid;
     border-radius: 5px;
 }
 
 .visor2 {
-    background: rgba(94, 1, 1, 0.342);
+    background: white;
     position: absolute;
     height: 50px;
     width: 35%;
@@ -347,7 +273,7 @@ label {
 }
 
 .visor3 {
-    background: rgba(94, 1, 1, 0.342);
+    background: white;
     border: grey 1px solid;
     border-radius: 5px;
     position: absolute;
@@ -359,56 +285,44 @@ label {
 
 
 /*====================================================================================
-                               ABA FINALIZANDO/ botoes
-======================================================================================*/
-
-.botoesModal {
-    position: absolute;
-    /* background: blue;*/
-    width: 100%;
-    margin-top: 480px;
-}
-
-.botoesModal button {
-    height: 50px;
-    width: 20%;
-}
-
-.botoesModal ul li {
-    display: inline;
-}
-
-.botoesModal ul {
-    margin-left: 40%;
-}
-
-
-/*====================================================================================
                                ABA FINALIZANDO/ entrega
 ======================================================================================*/
 
-.entrega {
-    position: absolute;
-    height: 450px;
-    width: 40%;
-    background: white;
-    margin-left: 5%;
-    border-radius: 20px;
-}
-
-.entrega2 {
-    margin-top: 20px;
-    /*background: blue;*/
-    height: 405px;
-    width: 80%;
-    margin-left: 10%;
-    position: inherit;
-}
-
-.entrega2 label {
-    color: black;
-}
-
-.entrega2 ul li {
+.cliente ul li {
     display: block;
+    margin-top: 15px;
+}
+
+.cliente ul {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.cliente textarea {
+    height: 50px;
+}
+
+.cliente h2 {
+    color: white;
+    margin-left: 5%;
+}
+
+.finalizando hr {
+    width: 90%;
+    margin-left: 5%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    z-index: 9999;
+}
+
+.finalizando {
+    position: absolute;
+    height: 950px;
+    width: 20%;
+    background: rgba(0, 0, 0, 0.671);
+    margin-left: 1%;
+    top: -20px;
+    margin-left: 0%;
+    position: absolute;
 }
