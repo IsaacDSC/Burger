@@ -375,7 +375,7 @@
             <h2>Cliente</h2>
             <ul>
                 <li><input type="text" name="cliente" class="form-control " placeholder="Digite o nome do Cliente"></li>
-                <li><input type="number" name="bairro" class="form-control " placeholder="Telefone"></li>
+                <li><input type="number" name="numero" class="form-control " placeholder="Telefone"></li>
                 <li>
                     <select name="bairro" class="form-control " id="">
                         <option value="0" checked="checked">Selecione</option>
@@ -414,10 +414,10 @@
             <ul>
                 <li><label for=" ">Cartão</label></li>
                 <li>
-                    <select class=" form-control " id=" ">
-                        <option value=" ">Selecione</option>
-                        <option value=" ">Débito</option>
-                        <option value=" ">Credito</option>
+                    <select class="form-control " id=" " name="cartao">
+                        <option value="dinheiro" aria-checked="true">Dinheiro</option>
+                        <option value="C.debito">Débito</option>
+                        <option value="C.credito">Credito</option>
                     </select>
                 </li>
                 <li><label for=" ">Dinheiro</label></li>

@@ -1,0 +1,12 @@
+#exibePedidos {
+    position: absolute;
+    background-color: white;
+}
+
+.pedidos {
+    background-color: white;
+}
+
+h2 {
+    text-align: center;
+}

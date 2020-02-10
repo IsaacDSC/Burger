@@ -1,0 +1,22 @@
+<section id="exibePedidos">
+    <h2>Exibindo pedidos</h2>
+    <hr>
+
+    <div class="pedidos">
+        {{#each posts}}
+        <ul>
+            <li>
+                <h3>Cliente({{dataValues.id}}) - Nome: {{dataValues.cliente}} - Telefone: {{dataValues.numero}} Tipo de
+                    Pagamento: {{dataValues.cartao}}</h3>
+            </li>
+            <li>
+                <h3></h3>
+            </li>
+            <li>
+                <h3>Pedido:</h3>
+            </li>
+        </ul>
+        <hr>
+        {{/each}}
+    </div>
+</section>

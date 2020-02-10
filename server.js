@@ -7,6 +7,7 @@ const Post = require('./models/Post')
 
 //adicinando rotas de recebimento
 const processaVendas = require('./routes/processaVendas')
+const exibePedidos = require('./routes/exibePedidos')
 
 //configurando bodyparser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -28,6 +29,9 @@ app.get('/vendas', (req, res) => {
     res.render('vendas/vendas')
 })
 app.use('/processaVendas', processaVendas)
+
+app.use('/pedidos', exibePedidos)
+
 
 const PORT = 3000
 app.listen(PORT, () => {

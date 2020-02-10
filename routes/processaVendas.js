@@ -6,7 +6,7 @@ router.post('/', (req, res) => {
     Post.create({
         cliente: req.body.cliente,
         numero: req.body.numero,
-        // bairro: req.body.bairro,
+        bairro: req.body.bairro,
         rua: req.body.rua,
         casa: req.body.casa,
         complemento: req.body.complemento,
