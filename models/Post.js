@@ -19,10 +19,10 @@ const Post = db.sequelize.define('pedidos', {
     complemento: {
         type: db.Sequelize.TEXT
     },
-    cartao: {
+    tipoPagamento: {
         type: db.Sequelize.STRING(10)
     },
-    dinheiro: {
+    total: {
         type: db.Sequelize.FLOAT
     },
     burger1: {

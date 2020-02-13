@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
         casa: req.body.casa,
         complemento: req.body.complemento,
         cartao: req.body.cartao,
-        dinheiro: req.body.dinheiro,
+        total: req.body.total,
         burger1: req.body.burger1,
         burger2: req.body.burger2,
         burger3: req.body.burger3,
@@ -41,7 +41,8 @@ router.post('/', (req, res) => {
         doces4: req.body.doces4,
         doces5: req.body.doces5
     }).then(function() {
-        res.send('Enviado com sucesso o Pedido')
+        //res.send('Enviado com sucesso o Pedido')
+        res.redirect('/vendas')
     }).catch(function(erro) {
         res.send('Erro ao enviar: ' + erro)
     })
