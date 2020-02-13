@@ -77,8 +77,19 @@ function calculando() {
         Bebidas: ${TotalBebidas}<br>
         Fritas: ${TotalFritas} <br>
         Doces: ${TotalDoces}`
-    var totalPedido = TotalBebidas + TotalBurger
+    var totalPedido = TotalBebidas + TotalBurger + TotalFritas + TotalDoces
     var tela2 = document.querySelector('#telaTotal')
     tela2.innerHTML = `Total: ${totalPedido}`
+
+    //adicionando tela de troco
+    var telaTroco = document.querySelector('#telaTroco')
+        //valor que o cliente ira pagar em dinheiro
+    var txtdinheiro = document.querySelector('#dinheiro')
+    var dinheiro = Number(txtdinheiro.value)
+    var txtvalorCompra = document.querySelector('#valorCompra')
+    var valorCompra = Number(txtvalorCompra.value)
+
+    var troco = dinheiro - valorCompra
+    telaTroco.innerHTML = `Troco: ${troco}`
 
 }

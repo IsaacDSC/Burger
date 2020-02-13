@@ -31,6 +31,14 @@ app.get('/vendas', (req, res) => {
 app.use('/processaVendas', processaVendas)
 
 app.use('/pedidos', exibePedidos)
+    //deletando /delete
+app.get('/delete/:id', (req, res) => {
+    Post.destroy({ where: { 'id': req.params.id } }).then(() => {
+        res.send('Postagem deletada com sucesso')
+    }).catch((err) => {
+        res.send('Postagem nao existe')
+    })
+})
 
 
 const PORT = 3000

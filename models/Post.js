@@ -5,7 +5,7 @@ const Post = db.sequelize.define('pedidos', {
         type: db.Sequelize.STRING(60)
     },
     numero: {
-        type: db.Sequelize.INTEGER
+        type: db.Sequelize.FLOAT
     },
     bairro: {
         type: db.Sequelize.FLOAT
@@ -14,7 +14,7 @@ const Post = db.sequelize.define('pedidos', {
         type: db.Sequelize.STRING(100)
     },
     casa: {
-        type: db.Sequelize.FLOAT
+        type: db.Sequelize.STRING
     },
     complemento: {
         type: db.Sequelize.TEXT
@@ -22,7 +22,7 @@ const Post = db.sequelize.define('pedidos', {
     tipoPagamento: {
         type: db.Sequelize.STRING(10)
     },
-    total: {
+    totalCompra: {
         type: db.Sequelize.FLOAT
     },
     burger1: {
@@ -40,7 +40,7 @@ const Post = db.sequelize.define('pedidos', {
     burger5: {
         type: db.Sequelize.FLOAT
     },
-    burge6r: {
+    burger6: {
         type: db.Sequelize.FLOAT
     },
     burger7: {
@@ -109,8 +109,7 @@ const Post = db.sequelize.define('pedidos', {
     },
     doces5: {
         type: db.Sequelize.FLOAT
-    },
-
+    }
 })
 
 //criando table

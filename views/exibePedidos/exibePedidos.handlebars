@@ -6,17 +6,27 @@
         {{#each posts}}
         <ul>
             <li>
-                <h3>Cliente({{dataValues.id}}) - Nome: {{dataValues.cliente}} - Telefone: {{dataValues.numero}} Tipo de
-                    Pagamento: {{dataValues.cartao}}</h3>
+                <h3><strong>Cliente: </strong>({{dataValues.id}}) - {{dataValues.cliente}} - <strong>Telefone: </strong>
+                    {{dataValues.numero}} <strong>Tipo de
+                        Pagamento:</strong> {{dataValues.tipoPagamento}}</h3>
+            </li>
+        </ul>
+
+    </div>
+    <div class="btnPedidos">
+        <ul>
+            <li>
+                <a href="/pedidos/notas"><button class="btn btn-success">Pedido:{{dataValues.id}}</button></a>
             </li>
             <li>
-                <h3></h3>
+                <a href=""><button class="btn btn-warning">Editar</button></a>
             </li>
             <li>
-                <h3>Pedido:</h3>
+                <a href="/delete/{{dataValues.id}}"><button type="submit" class="btn btn-danger">Deletar</button></a>
             </li>
         </ul>
         <hr>
         {{/each}}
     </div>
+
 </section>

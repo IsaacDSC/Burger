@@ -13,5 +13,7 @@ router.get('/', (req, res) => {
         res.render('exibePedidos/exibePedidos', { posts: posts })
     })
 })
-
+router.get('/notas', (req, res) => {
+    res.send('notas')
+})
 module.exports = router

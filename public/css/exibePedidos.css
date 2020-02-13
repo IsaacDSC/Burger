@@ -10,3 +10,13 @@
 h2 {
     text-align: center;
 }
+
+.btnPedidos ul li {
+    display: inline;
+}
+
+#exibePedidos h2 {
+    font-size: 54px;
+    color: grey;
+    text-decoration: black;
+}
