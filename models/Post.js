@@ -4,8 +4,8 @@ const Post = db.sequelize.define('pedidos', {
     cliente: {
         type: db.Sequelize.STRING(60)
     },
-    numero: {
-        type: db.Sequelize.FLOAT
+    telefone: {
+        type: db.Sequelize.INTEGER
     },
     bairro: {
         type: db.Sequelize.FLOAT

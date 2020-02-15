@@ -39,7 +39,15 @@ app.get('/delete/:id', (req, res) => {
         res.send('Postagem nao existe')
     })
 })
+app.post("/pedido/:id", (req, res) => {
+    Post.findAll({
 
+    }).then(() => {
+        res.render('pedido/pedido', { post: post })
+    }).catch((err) => {
+        res.send('erro: ' + err)
+    })
+})
 
 const PORT = 3000
 app.listen(PORT, () => {

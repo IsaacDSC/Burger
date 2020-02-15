@@ -5,7 +5,7 @@ const Post = require('../models/Post')
 router.post('/', (req, res) => {
     Post.create({
         cliente: req.body.cliente,
-        //numero: req.body.numero,
+        telefone: req.body.telefone,
         bairro: req.body.bairro,
         rua: req.body.rua,
         casa: req.body.casa,

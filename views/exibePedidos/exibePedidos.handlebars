@@ -5,10 +5,9 @@
     <div class="pedidos">
         {{#each posts}}
         <ul>
-            <li>
-                <h3><strong>Cliente: </strong>({{dataValues.id}}) - {{dataValues.cliente}} - <strong>Telefone: </strong>
-                    {{dataValues.numero}} <strong>Tipo de
-                        Pagamento:</strong> {{dataValues.tipoPagamento}}</h3>
+            <h3><strong>Cliente: </strong>({{dataValues.id}}) - {{dataValues.cliente}} - <strong>Telefone: </strong>
+                {{dataValues.telefone}} - <strong>Tipo de
+                    Pagamento:</strong> {{dataValues.tipoPagamento}}</h3>
             </li>
         </ul>
 
@@ -16,7 +15,9 @@
     <div class="btnPedidos">
         <ul>
             <li>
-                <a href="/pedidos/notas"><button class="btn btn-success">Pedido:{{dataValues.id}}</button></a>
+                <a href="/pedido/{{dataValues.id}}">
+                    <button class="btn btn-success">Pedido:{{dataValues.id}}</button>
+                </a>
             </li>
             <li>
                 <a href=""><button class="btn btn-warning">Editar</button></a>
