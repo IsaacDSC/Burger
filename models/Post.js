@@ -2,28 +2,33 @@ const db = require('./db')
 
 const Post = db.sequelize.define('pedidos', {
     cliente: {
-        type: db.Sequelize.STRING(60)
+        type: db.Sequelize.STRING(60),
+        require: true
     },
     telefone: {
-        type: db.Sequelize.INTEGER
+        type: db.Sequelize.INTEGER,
+        require: true
     },
     bairro: {
-        type: db.Sequelize.FLOAT
+        type: db.Sequelize.FLOAT,
+        require: true
     },
     rua: {
-        type: db.Sequelize.STRING(100)
+        type: db.Sequelize.STRING(100),
+        require: true
     },
     casa: {
-        type: db.Sequelize.STRING
+        type: db.Sequelize.STRING,
+        require: true
     },
     complemento: {
         type: db.Sequelize.TEXT
     },
     tipoPagamento: {
-        type: db.Sequelize.STRING(10)
+        type: db.Sequelize.STRING(10),
     },
-    totalCompra: {
-        type: db.Sequelize.FLOAT
+    valorCompra: {
+        type: db.Sequelize.FLOAT,
     },
     burger1: {
         type: db.Sequelize.FLOAT

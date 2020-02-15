@@ -11,7 +11,7 @@ router.post('/', (req, res) => {
         casa: req.body.casa,
         complemento: req.body.complemento,
         tipoPagamento: req.body.tipoPagamento,
-        totalCompra: req.body.totalCompra,
+        valorCompra: req.body.valorCompra,
         burger1: req.body.burger1,
         burger2: req.body.burger2,
         burger3: req.body.burger3,
