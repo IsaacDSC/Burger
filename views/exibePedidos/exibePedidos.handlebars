@@ -1,33 +1,28 @@
 <section id="exibePedidos">
     <h2>Exibindo pedidos</h2>
     <hr>
+    {{#each posts}}
+    <div class="card mt-2">
+        <div class="card-body">
+            <ul>
+                <h3><strong>Cliente: </strong>({{dataValues.id}}) - {{dataValues.cliente}} - <strong>Telefone: </strong>
+                    {{dataValues.telefone}} - <strong>Tipo de
+                        Pagamento:</strong> {{dataValues.tipoPagamento}}</h3>
+                </li>
+                <li>
+                    <a href="/pedido/{{dataValues.id}}">
+                        <button class="btn btn-success">Pedido:{{dataValues.id}}</button>
+                    </a>
 
-    <div class="pedidos">
-        {{#each posts}}
-        <ul>
-            <h3><strong>Cliente: </strong>({{dataValues.id}}) - {{dataValues.cliente}} - <strong>Telefone: </strong>
-                {{dataValues.telefone}} - <strong>Tipo de
-                    Pagamento:</strong> {{dataValues.tipoPagamento}}</h3>
-            </li>
-        </ul>
+                    <a href=""><button class="btn btn-warning">Editar</button></a>
 
+                    <a href="/delete/{{dataValues.id}}"><button type="submit"
+                            class="btn btn-danger">Deletar</button></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="btnPedidos">
-        <ul>
-            <li>
-                <a href="/pedido/{{dataValues.id}}">
-                    <button class="btn btn-success">Pedido:{{dataValues.id}}</button>
-                </a>
-            </li>
-            <li>
-                <a href=""><button class="btn btn-warning">Editar</button></a>
-            </li>
-            <li>
-                <a href="/delete/{{dataValues.id}}"><button type="submit" class="btn btn-danger">Deletar</button></a>
-            </li>
-        </ul>
-        <hr>
-        {{/each}}
-    </div>
+
+    {{/each}}
 
 </section>
