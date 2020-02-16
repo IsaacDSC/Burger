@@ -4,10 +4,29 @@ const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
 const Post = require('./models/Post')
+const session = require('express-session')
+const flash = require('connect-flash')
 
 //adicinando rotas de recebimento
 const processaVendas = require('./routes/processaVendas')
 const exibePedidos = require('./routes/exibePedidos')
+
+//configurando session
+app.use(session({
+    secret: 'md5(!@#)123',
+    resave: true,
+    saveUninitialized: true
+}))
+
+//configurando flash
+app.use(flash())
+
+//configurando midleware
+app.use((req, res, next) => {
+    res.locals.success_msg = req.flash('success_msg')
+    res.locals.error_msg = req.flash('error_msg')
+    next()
+})
 
 //configurando bodyparser
 app.use(bodyParser.urlencoded({ extended: false }))

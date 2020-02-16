@@ -42,9 +42,12 @@ router.post('/', (req, res) => {
         doces5: req.body.doces5
     }).then(function() {
         //res.send('Enviado com sucesso o Pedido')
+        req.flash('success_msg', 'Pedido enviado com sucesso!')
         res.redirect('/vendas')
     }).catch(function(erro) {
-        res.send('Erro ao enviar: ' + erro)
+        req.flash('error_msg', 'Erro ao Enviar Pedido: ' + erro)
+        res.redirect('/vendas')
+            //res.send('Erro ao enviar: ' + erro)
     })
 })
 
