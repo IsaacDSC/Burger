@@ -58,11 +58,15 @@ app.get('/delete/:id', (req, res) => {
         res.send('Postagem nao existe')
     })
 })
-app.post("/pedido/:id", (req, res) => {
-    Post.findAll({
+app.get("/pedido/:id", (req, res) => {
+    Post.findOne({ _id: req.params.id }).then((pedido) => {
+        res.render('pedido/pedido', {
+            pedido: {
+                id: pedido.id,
+                cliente: pedido.cliente
+            }
+        })
 
-    }).then(() => {
-        res.render('pedido/pedido', { post: post })
     }).catch((err) => {
         res.send('erro: ' + err)
     })
