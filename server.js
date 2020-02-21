@@ -59,13 +59,9 @@ app.get('/delete/:id', (req, res) => {
     })
 })
 app.get("/pedido/:id", (req, res) => {
-    Post.findOne({ _id: req.params.id }).then((pedido) => {
-        res.render('pedido/pedido', {
-            pedido: {
-                id: pedido.id,
-                cliente: pedido.cliente
-            }
-        })
+    Post.findByPk(req.params.id).then((pedido) => {
+        // res.render('pedido/pedido', { pedido: pedido })
+        res.json(pedido)
 
     }).catch((err) => {
         res.send('erro: ' + err)
