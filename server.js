@@ -40,31 +40,58 @@ app.set('view engine', 'handlebars')
 app.use(express.static(path.join(__dirname, 'public')))
 
 //adicionando rotas
-
+//adicionando rota principal
 app.get('/', (req, res) => {
-    res.render('login/login')
-})
-app.get('/vendas', (req, res) => {
-    res.render('vendas/vendas')
-})
-app.use('/processaVendas', processaVendas)
-
-app.use('/pedidos', exibePedidos)
-    //deletando /delete
-app.get('/delete/:id', (req, res) => {
-    Post.destroy({ where: { 'id': req.params.id } }).then(() => {
-        res.send('Postagem deletada com sucesso')
-    }).catch((err) => {
-        res.send('Postagem nao existe')
+        res.render('login/login')
     })
-})
-app.get("/pedido/:id", (req, res) => {
-    Post.findByPk(req.params.id).then((pedido) => {
-        // res.render('pedido/pedido', { pedido: pedido })
-        res.json(pedido)
+    /*================================================================================
+                        adionando rotas da abas de vendas
+    ================================================================================
+    */
+    //adicionando rota de vendas
+app.get('/vendas', (req, res) => {
+        res.render('vendas/vendas')
+    })
+    //adionando rota de processo para envio de vendas
+app.use('/processaVendas', processaVendas)
+    /*=============================================================================
+                adiconando abas que exibem pedidos feitos e registrados 
+    ============================================================================*/
+app.use('/pedidos', exibePedidos)
 
+//adionando delete na aba de exibir pedidos
+app.get('/delete/:id', (req, res) => {
+        Post.destroy({ where: { 'id': req.params.id } }).then(() => {
+            res.send('Postagem deletada com sucesso')
+        }).catch((err) => {
+            res.send('Postagem nao existe')
+        })
+    })
+    //adionando ver mais  aba de exibir pedidos
+app.get("/pedido/:id", (req, res) => {
+        Post.findByPk(req.params.id).then((pedido) => {
+            // res.render('pedido/pedido', { pedido: pedido })
+            res.json(pedido)
+
+        }).catch((err) => {
+            res.send('erro: ' + err)
+        })
+    })
+    //adiconando editar na aba de exibir pedidos
+app.get('/editar/:id', (req, res) => {
+    Post.findOne({ id: req.body.id }).then((editar) => {
+        editar.cliente = req.body.cliente
+
+        editar.save().then(() => {
+            req.flash('success_msg', 'Pedido editado com sucesso!')
+            res.redirect('/pedidos')
+        }).catch((err) => {
+            req.flash('error_msg', 'Houve um erro ao salvar a edição')
+            res.redirect('/pedidos')
+        })
     }).catch((err) => {
-        res.send('erro: ' + err)
+        req.flash('error_msg', 'Houve um erro ao editar a categoria')
+        res.redirect('/pedidos')
     })
 })
 
